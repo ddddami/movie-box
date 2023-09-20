@@ -1,0 +1,31 @@
+.movieCard__detail p {
+  margin-bottom: 0;
+  margin-left: 1rem;
+  display: inline-block;
+}
+.grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4rem;
+}
+
+@media screen and (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.movies {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.movieCard__poster {
+  width: 100%;
+}
+
+.movieCard__detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

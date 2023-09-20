@@ -1,8 +1,7 @@
 @import url(./normalize.css);
-::root {
+:root {
   --color-primary: #b91c1c;
-  --color-body-light: #fff;
-  /* --color-body-light: #9ca3af; */
+  --color-body-light: #9ca3af;
   --color-body: #111427;
 }
 

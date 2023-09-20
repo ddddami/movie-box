@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { IMAGE_BASE_URL } from "./config";
+import MovieList from "./components/MovieList";
+import "./App.css";
 
 const AUTH_TOKEN = import.meta.env.VITE_API_KEY;
 const App = () => {
@@ -23,14 +24,9 @@ const App = () => {
   }, []);
   if (isLoading) return <p>Loading....</p>;
   return (
-    <div>
-      {movies.map((movie) => (
-        <div key={movie.id}>
-          <img src={IMAGE_BASE_URL + movie.poster_path} alt="" />
-          <p>{movie.title}</p>
-        </div>
-      ))}
-    </div>
+    <main>
+      <MovieList movies={movies} />
+    </main>
   );
 };
 
