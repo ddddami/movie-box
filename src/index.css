@@ -1,6 +1,6 @@
 @import url(./normalize.css);
 :root {
-  --color-primary: #b91c1c;
+  --color-primary: #be123c;
   --color-body-light: #9ca3af;
   --color-body: #111427;
 }
@@ -41,6 +41,7 @@ h3 {
 }
 p {
   margin-top: 0;
+  max-width: 60ch;
 }
 ::selection {
   background-color: var(--color-primary);
@@ -83,6 +84,17 @@ p {
   color: var(--color-body-light);
 }
 
+/* Spacing */
+.mb-1 {
+  margin-bottom: 2rem;
+}
+.mt-2 {
+  margin-top: 3rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -99,4 +111,12 @@ a {
 a::after {
   content: ">";
   margin-left: 12px;
+}
+
+/* Buttons */
+.btn {
+  background: none;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }

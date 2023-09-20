@@ -1,6 +1,33 @@
 .movieBanner {
+  padding: 3rem;
   color: #fff;
   height: 40rem;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+}
+
+.movieBanner__heading,
+.movieBanner p {
+  color: #fff;
+}
+.movieBanner p {
+  line-height: 2rem;
+}
+
+.movieBanner__heading {
+  margin: 0;
+  font-weight: 400;
+}
+
+.movieBanner__content .movieScore {
+  justify-content: space-between;
+  max-width: 160px;
+}
+
+.movieBanner .movieBanner__button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 5px;
 }
