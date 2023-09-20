@@ -61,6 +61,11 @@ p {
   }
 }
 
+.text-lg {
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--color-body);
+}
 .text-base {
   font-size: 1.6rem;
   line-height: 1.5rem;
@@ -76,4 +81,22 @@ p {
   font-size: 1rem;
   line-height: 1.6rem;
   color: var(--color-body-light);
+}
+
+.flex {
+  display: flex;
+}
+
+.simple-flex {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+a::after {
+  content: ">";
+  margin-left: 12px;
 }

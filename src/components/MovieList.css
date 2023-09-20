@@ -16,8 +16,7 @@
   }
 }
 .movies {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+  padding: 3.5rem;
 }
 
 .movieCard__poster {
@@ -28,4 +27,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.movies .movies__header {
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.movies .movies__heading {
+  display: inline-block;
+  margin: 0;
+}
+.movies .link {
+  color: var(--color-primary);
 }
