@@ -1,5 +1,5 @@
-import MovieScore from "./MovieScore";
 import { IMAGE_BASE_URL } from "../config";
+import MovieScore from "./MovieScore";
 import "./MovieList.css";
 
 const MovieList = ({ movies }) => {
