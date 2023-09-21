@@ -1,8 +1,11 @@
 import MovieScore from "./MovieScore";
+import { useNavigate } from "react-router-dom";
 import { getSmallImage } from "../services/image-service";
 import "./MovieList.css";
 
 const MovieList = ({ movies }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="movies">
       <div className="movies__header  flex simple-flex">
@@ -13,7 +16,11 @@ const MovieList = ({ movies }) => {
       </div>
       <div className="grid">
         {movies.map((movie) => (
-          <div key={movie.id} className="movieCard">
+          <div
+            key={movie.id}
+            className="movieCard"
+            onClick={() => navigate("/movies/" + movie.id)}
+          >
             <img
               className="movieCard__poster"
               src={getSmallImage(movie.poster_path)}

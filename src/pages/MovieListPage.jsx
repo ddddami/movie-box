@@ -22,6 +22,7 @@ const MovieListPage = () => {
   const getRandomMovie = () => {
     return movies[Math.ceil(Math.random() * movies.length)];
   };
+
   return (
     <main>
       <MovieBanner movie={getRandomMovie()} />
