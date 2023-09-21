@@ -1,5 +1,5 @@
-import { IMAGE_BASE_URL } from "../config";
 import MovieScore from "./MovieScore";
+import { getSmallImage } from "../services/image-service";
 import "./MovieList.css";
 
 const MovieList = ({ movies }) => {
@@ -16,7 +16,7 @@ const MovieList = ({ movies }) => {
           <div key={movie.id} className="movieCard">
             <img
               className="movieCard__poster"
-              src={IMAGE_BASE_URL + "/w500" + movie.poster_path}
+              src={getSmallImage(movie.poster_path)}
               alt=""
             />
             <p className="text-xs">USA, 2023</p>

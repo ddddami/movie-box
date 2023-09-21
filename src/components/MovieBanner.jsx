@@ -1,13 +1,13 @@
-import { IMAGE_BASE_URL } from "../config";
 import MovieScore from "./MovieScore";
 import Header from "./Header";
+import { getOriginalImage } from "../services/image-service";
 import "./MovieBanner.css";
 
 const MovieBanner = ({ movie }) => {
   return (
     <section
       style={{
-        backgroundImage: `url(${IMAGE_BASE_URL}/original${movie.backdrop_path})`,
+        backgroundImage: `url(${getOriginalImage(movie.poster_path)})`,
       }}
       className="movieBanner"
     >
