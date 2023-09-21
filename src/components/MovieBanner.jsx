@@ -1,5 +1,6 @@
 import { IMAGE_BASE_URL } from "../config";
 import MovieScore from "./MovieScore";
+import Header from "./Header";
 import "./MovieBanner.css";
 
 const MovieBanner = ({ movie }) => {
@@ -10,6 +11,7 @@ const MovieBanner = ({ movie }) => {
       }}
       className="movieBanner"
     >
+      <Header />
       <div className="movieBanner__content">
         <h2 className="movieBanner__heading mb-1">{movie.title}</h2>
         <MovieScore movie={movie} />

@@ -89,10 +89,17 @@ p {
   margin-bottom: 2rem;
 }
 .mt-2 {
-  margin-top: 3rem;
+  margin-top: 2.6rem;
 }
 .mb-2 {
   margin-bottom: 1rem;
+}
+
+.mr-3 {
+  margin-right: 0.5rem;
+}
+.ml-3 {
+  margin-right: 0.5rem;
 }
 
 .flex {
@@ -119,4 +126,16 @@ a::after {
   padding: 10px;
   border: none;
   cursor: pointer;
+}
+
+/* Inputs */
+
+.input {
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  outline: 0;
+}
+::placeholder {
+  color: #eee;
 }

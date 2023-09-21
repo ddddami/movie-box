@@ -1,0 +1,30 @@
+.header.flex {
+  justify-content: space-around;
+}
+
+.header__searchBar {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 0.15rem 0.7rem;
+  flex-grow: 1;
+  max-width: 60rem;
+  max-height: 2.7rem;
+}
+.header .header__searchBar svg {
+  height: 2.1rem;
+}
+.header__searchBar input {
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  margin-right: auto;
+}
+
+.header svg,
+.header img {
+  width: 30px;
+  height: 30px;
+}
+.header {
+  margin-bottom: 4rem;
+}
