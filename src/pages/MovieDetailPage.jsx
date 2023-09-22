@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { DotWave } from "@uiball/loaders";
 import apiClient from "../services/api-client";
 import { getOriginalImage } from "../services/image-service";
@@ -7,6 +7,7 @@ import "../components/MovieDetail.css";
 
 const MovieDetailPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [movie, setMovie] = useState({});
   const [isLoading, setLoading] = useState(true);
 
@@ -28,6 +29,7 @@ const MovieDetailPage = () => {
       })
       .catch((err) => {
         console.log(err);
+        navigate("/");
       })
       .finally(() => setLoading(false));
   }, []);
