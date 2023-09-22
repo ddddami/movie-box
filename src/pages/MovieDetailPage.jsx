@@ -49,7 +49,7 @@ const MovieDetailPage = () => {
         </div>
         <div className="nav">
           <ul className="nav_items">
-            <li className="nav_link flex">
+            <li className="nav_link flex" style={{cursor: 'pointer'}} onClick={() => navigate('/')}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -66,7 +66,7 @@ const MovieDetailPage = () => {
               </svg>
               <p className="text-md">Home</p>
             </li>
-            <li className="nav_link flex active">
+            <li className="nav_link flex active" style={{cursor: 'pointer'}}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -83,7 +83,7 @@ const MovieDetailPage = () => {
 
               <p className="text-md">Movies</p>
             </li>
-            <li className="nav_link flex">
+            <li className="nav_link flex" style={{cursor: 'pointer'}}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -100,7 +100,7 @@ const MovieDetailPage = () => {
               </svg>
               <p className="text-md">TV Series</p>
             </li>
-            <li className="nav_link flex">
+            <li className="nav_link flex" style={{cursor: 'pointer'}}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
