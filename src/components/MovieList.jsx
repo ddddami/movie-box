@@ -11,7 +11,7 @@ const MovieList = ({ movies }) => {
           <img
             className="movieCard__poster"
             src={IMAGE_BASE_URL + movie.poster_path}
-            alt=""
+            alt={movie.title}
           />
           <p className="text-xs">USA, 2023</p>
           <p>{movie.title}</p>
