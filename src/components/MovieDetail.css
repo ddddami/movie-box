@@ -1,3 +1,7 @@
+.movieDetail {
+  width: 100%;
+  /* border: 2px solid black; */
+}
 .movieDetail .movieDetail__banner {
   width: 100%;
   max-height: 40rem;
