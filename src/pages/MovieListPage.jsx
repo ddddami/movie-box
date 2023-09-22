@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { DotWave } from "@uiball/loaders";
 import MovieList from "../components/MovieList";
 import MovieBanner from "../components/MovieBanner";
 import apiClient from "../services/api-client";
@@ -17,7 +18,12 @@ const MovieListPage = () => {
       })
       .catch((err) => console.log(err.message));
   }, []);
-  if (isLoading) return <p>Loading....</p>;
+  if (isLoading)
+    return (
+      <div className="flex simple-flex" style={{ padding: "30rem" }}>
+        <DotWave size={47} speed={1} color="black" />
+      </div>
+    );
 
   const getRandomMovie = () => {
     return movies[Math.ceil(Math.random() * movies.length)];
