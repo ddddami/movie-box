@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { DotWave } from "@uiball/loaders";
 import apiClient from "../services/api-client";
 import { getOriginalImage } from "../services/image-service";
 import "../components/MovieDetail.css";
@@ -7,6 +8,7 @@ import "../components/MovieDetail.css";
 const MovieDetailPage = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
+  const [isLoading, setLoading] = useState(true);
 
   const getReleaseYear = (dateString) => {
     const dateObject = new Date(dateString);
@@ -21,12 +23,22 @@ const MovieDetailPage = () => {
   useEffect(() => {
     apiClient
       .get("/movie/" + id)
-      .then((res) => setMovie(res.data))
-      .catch((err) => console.log(err));
+      .then((res) => {
+        setMovie(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => setLoading(false));
   }, []);
+  if (isLoading)
+    return (
+      <div className="flex simple-flex" style={{ padding: "30rem" }}>
+        <DotWave size={47} speed={1} color="black" />
+      </div>
+    );
   return (
     <div className="movieDetail">
-      {/* MovieDetailPage - {id} */}
       <img
         className="movieDetail__banner"
         src={getOriginalImage(movie.backdrop_path)}
