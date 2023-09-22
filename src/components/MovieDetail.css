@@ -1,0 +1,6 @@
+.movieDetail .movieDetail__banner {
+  width: 100%;
+  max-height: 40rem;
+  object-fit: cover;
+  border-radius: 3rem;
+}
